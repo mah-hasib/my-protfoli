@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact - Design Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8c25f4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .custom-gradient {
+            background: linear-gradient(135deg, rgba(140, 37, 244, 0.15) 0%, rgba(25, 16, 34, 0) 100%);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+    <header
+        class="flex items-center bg-background-light dark:bg-background-dark p-4 sticky top-0 z-10 border-b border-slate-200 dark:border-primary/20">
+        <button
+            class="text-slate-900 dark:text-slate-100 flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+            <span class="material-symbols-outlined">arrow_back</span>
+        </button>
+        <h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 ml-2">
+            Contact Me</h2>
+    </header>
+    <main class="flex-1 max-w-4xl mx-auto w-full px-4 py-8">
+        <div class="mb-10">
+            <h1 class="text-slate-900 dark:text-slate-100 tracking-tight text-4xl font-bold leading-tight mb-4">Let's
+                build something incredible.</h1>
+            <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed max-w-2xl">
+                Whether you have a specific project in mind or just want to chat about design, I'm always open to new
+                opportunities.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+            <div class="lg:col-span-3">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label
+                                class="text-slate-900 dark:text-slate-200 text-sm font-semibold uppercase tracking-wider">Full
+                                Name</label>
+                            <input
+                                class="form-input w-full rounded-xl border border-slate-200 dark:border-primary/30 bg-white dark:bg-primary/5 focus:border-primary focus:ring-1 focus:ring-primary text-slate-900 dark:text-white h-14 px-4 placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                                placeholder="John Doe" type="text" />
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label
+                                class="text-slate-900 dark:text-slate-200 text-sm font-semibold uppercase tracking-wider">Email
+                                Address</label>
+                            <input
+                                class="form-input w-full rounded-xl border border-slate-200 dark:border-primary/30 bg-white dark:bg-primary/5 focus:border-primary focus:ring-1 focus:ring-primary text-slate-900 dark:text-white h-14 px-4 placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                                placeholder="hello@example.com" type="email" />
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label
+                            class="text-slate-900 dark:text-slate-200 text-sm font-semibold uppercase tracking-wider">Subject</label>
+                        <input
+                            class="form-input w-full rounded-xl border border-slate-200 dark:border-primary/30 bg-white dark:bg-primary/5 focus:border-primary focus:ring-1 focus:ring-primary text-slate-900 dark:text-white h-14 px-4 placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                            placeholder="Project Inquiry" type="text" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label
+                            class="text-slate-900 dark:text-slate-200 text-sm font-semibold uppercase tracking-wider">Message</label>
+                        <textarea
+                            class="form-textarea w-full rounded-xl border border-slate-200 dark:border-primary/30 bg-white dark:bg-primary/5 focus:border-primary focus:ring-1 focus:ring-primary text-slate-900 dark:text-white p-4 placeholder:text-slate-400 dark:placeholder:text-slate-500 resize-none"
+                            placeholder="Tell me about your project..." rows="5"></textarea>
+                    </div>
+                    <button
+                        class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+                        type="submit">
+                        <span>Send Message</span>
+                        <span class="material-symbols-outlined text-xl">send</span>
+                    </button>
+                </form>
+            </div>
+            <div class="lg:col-span-2 flex flex-col gap-8">
+                <div
+                    class="p-6 rounded-2xl bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 custom-gradient">
+                    <h3 class="text-xl font-bold mb-6">Contact Info</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-primary">mail</span>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm">Email me at</p>
+                                <p class="font-medium text-slate-900 dark:text-white">hello@alexdesign.studio</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-primary">location_on</span>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm">Based in</p>
+                                <p class="font-medium text-slate-900 dark:text-white">San Francisco, CA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 rounded-2xl bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20">
+                    <h3 class="text-lg font-bold mb-4">Follow My Work</h3>
+                    <div class="flex gap-3">
+                        <a class="size-12 rounded-xl bg-slate-100 dark:bg-primary/10 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined">language</span>
+                        </a>
+                        <a class="size-12 rounded-xl bg-slate-100 dark:bg-primary/10 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined">camera</span>
+                        </a>
+                        <a class="size-12 rounded-xl bg-slate-100 dark:bg-primary/10 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined">share</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-2xl border border-slate-200 dark:border-primary/20 h-48 relative">
+                    <img alt="Map location" class="w-full h-full object-cover grayscale brightness-50 contrast-125"
+                        data-alt="Modern dark stylized map of San Francisco" data-location="San Francisco"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsGTSMstKB_ik2PK_W7Q6uMA8KoBaK0Gqg6SnpLmEPcX9BNJv-3OqGuiPNr7Nz6tYL3sWas_K1c-1uVJ_eYllKuAbDzfKxifuaSkGzWdkUWQroaMTp7fwyYlFJd1le9T6pTa-0nRdM1VDt1_AXdkPWvr2n_qWUcSdzizfnGVaGk_9t-FJNNvxkcosiUWdCW6roVi8Ncf-hon_6a3z0UHbBT8cawzLnHbNOkX0hD7ELoN_gnLYVjRjS_3qPzTAzn-GvOdC1HPm2K2M" />
+                    <div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer
+        class="mt-auto border-t border-slate-200 dark:border-primary/20 bg-white dark:bg-background-dark/80 backdrop-blur-md">
+        <nav class="max-w-md mx-auto flex justify-around p-3">
+            <a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+                <span class="material-symbols-outlined">grid_view</span>
+                <span class="text-[10px] font-medium uppercase tracking-tighter">Portfolio</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+                <span class="material-symbols-outlined">person</span>
+                <span class="text-[10px] font-medium uppercase tracking-tighter">Profile</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+                <span class="material-symbols-outlined">palette</span>
+                <span class="text-[10px] font-medium uppercase tracking-tighter">Services</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-primary" href="#">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">mail</span>
+                <span class="text-[10px] font-bold uppercase tracking-tighter">Contact</span>
+            </a>
+        </nav>
+    </footer>
+</body>
+
+</html>
